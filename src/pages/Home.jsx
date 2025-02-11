@@ -331,8 +331,29 @@ const Home = () => {
 
 
 
-
-
+{/* Highlights Section */}
+<div className="bg-gradient-to-r from-blue-700 via-purple-400 to-blue-600  p-10 text-white border-b-2 border-white" data-aos="fade-up">
+  <h2 className="text-4xl md:text-4xl font-extrabold text-center mb-8 text-white">
+    Why Choose Us?
+  </h2>
+  <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4">
+    <div className="text-center transform transition-transform duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+      <div className="text-5xl mb-4 text-yellow-400">⭐</div>
+      <h3 className="font-semibold text-xl mb-2">Top-Rated Services</h3>
+      <p className="text-lg">We consistently receive top ratings from our customers for quality and reliability.</p>
+    </div>
+    <div className="text-center transform transition-transform duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="200">
+      <div className="text-5xl mb-4 text-purple-400">⏱</div>
+      <h3 className="font-semibold text-xl mb-2">Quick Response</h3>
+      <p className="text-lg">Our team ensures prompt responses and swift resolution to your service needs.</p>
+    </div>
+    <div className="text-center transform transition-transform duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="300">
+      <div className="text-5xl mb-4 text-blue-400">💼</div>
+      <h3 className="font-semibold text-xl mb-2">Professional Team</h3>
+      <p className="text-lg">Our experienced professionals are dedicated to delivering excellence in every service.</p>
+    </div>
+  </div>
+</div>
 
 
     </div>
