@@ -140,6 +140,55 @@ const Home = () => {
 
 
 
+<section id="featured" className="py-5 bg-gradient-to-r from-blue-700 via-purple-400 to-blue-600 p-5">
+  <div className="text-center p-2">
+    <h1 className="text-4xl md:text-4xl font-extrabold px-10 text-yellow-500 mb-4 ">
+      Our <span className="text-white">Top Featured Services</span>
+    </h1>
+    <p className="text-lg text-white max-w-2xl px-10 mx-auto">
+    Experience our exceptional premium services, thoughtfully designed for unmatched convenience and a truly effortless lifestyle.
+    </p>
+
+  </div>
+
+  <div
+    className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-6 md:px-12"
+    data-aos="fade-up"
+  >
+    {randomServices.map((service) => (
+      <div
+        key={service._id}
+        className="relative group bg-white opacity-70 rounded-xl shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105"
+      >
+        <ServiceCard service={service} />
+        {/* Removed the blur effect */}
+        <div className="absolute bottom-4 left-4 right-4 flex justify-center">
+          <button
+            onClick={() => navigate(`/service-details/${service._id}`)}
+           
+          >
+            
+          </button>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <div className="flex justify-center mt-12" data-aos="zoom-in">
+    <button
+      onClick={() => navigate("/services")}
+      className="px-8 py-3 text-lg font-semibold rounded-full shadow-lg bg-purple-600 text-white hover:bg-green-500 hover:scale-105 transition-all duration-300"
+    >
+      See All Services
+    </button>
+  </div>
+</section>
+
+
+
+
+
+
 
     </div>
   );
