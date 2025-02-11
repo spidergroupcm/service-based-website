@@ -187,6 +187,46 @@ const Home = () => {
 
 
 
+<section id="about" className="bg-gradient-to-r from-blue-700 via-purple-400 to-blue-600  border-t-2 border-b-2 border-white p-10">
+  <div className="container mx-auto px-6 lg:px-12">
+    <div className="flex flex-col lg:flex-row items-center">
+      {/* Left - Image */}
+      <div className="w-[400px] h-[400px]">
+        <img src={about} alt="About Us" className="rounded-lg shadow-lg w-full" />
+      </div>
+
+      {/* Right - Text Content */}
+      <div className="lg:w-1/2 mt-8 lg:mt-0 lg:pl-12">
+        <h2 className="text-4xl font-bold text-white mb-4">About Our Services</h2>
+        <p className="text-lg text-white">
+          At <span className="font-semibold text-white">Fasthelpbd</span>, we provide top-notch services tailored to meet your needs. Our expert team ensures high-quality solutions, customer satisfaction, and timely delivery. Whether you're looking for technical support, digital solutions, or business services, we've got you covered!
+        </p>
+
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex items-center space-x-3">
+            <span className="text-white text-3xl">🚀</span>
+            <p className="text-white font-medium">Fast & Reliable Service</p>
+          </div>
+          <div className="flex items-center space-x-3">
+            <span className="text-white text-3xl">✅</span>
+            <p className="text-white font-medium">100% Customer Satisfaction</p>
+          </div>
+          <div className="flex items-center space-x-3">
+            <span className="text-white text-3xl">💡</span>
+            <p className="text-white font-medium">Innovative & Smart Solutions</p>
+          </div>
+          <div className="flex items-center space-x-3">
+            <span className="text-white text-3xl">📞</span>
+            <p className="text-white font-medium">24/7 Support Available</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
 
 
