@@ -226,6 +226,111 @@ const Home = () => {
 </section>
 
 
+    {/* Testimonials Section - A showcase of client feedback */}
+    <div className="bg-gradient-to-r from-blue-700 via-purple-400 to-blue-600  py-16  px-6 md:px-12 border-b-2 border-white" data-aos="fade-up">
+        {/* Section Title */}
+        <h2 className="text-4xl font-extrabold text-center text-white mb-10">What Our Clients Say</h2>
+        
+        {/* Testimonials Container */}
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+          
+          {/* Testimonial Card 1 */}
+          <div className="bg-white  p-8 rounded-xl shadow-lg transform transition duration-300 hover:scale-105" data-aos="flip-left">
+            <p className="italic text-gray-700 text-lg">“The services provided were exceptional and exceeded my expectations!”</p>
+            
+            {/* User Info */}
+            <div className="mt-6 flex items-center">
+              <div className="w-14 h-14 flex items-center justify-center bg-blue-500 text-white text-lg font-bold rounded-full mr-4">J</div>
+              <div>
+                <p className="font-semibold text-gray-900">John Doe</p>
+                <p className="text-sm text-gray-500">Entrepreneur</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Testimonial Card 2 */}
+          <div className="bg-white p-8 rounded-xl shadow-lg transform transition duration-300 hover:scale-105" data-aos="flip-right">
+            <p className="italic text-gray-700 text-lg">“Highly recommend! Professional and reliable services every time.”</p>
+            
+            {/* User Info */}
+            <div className="mt-6 flex items-center">
+              <div className="w-14 h-14 flex items-center justify-center bg-pink-500 text-white text-lg font-bold rounded-full mr-4">M</div>
+              <div>
+                <p className="font-semibold text-gray-900">Maria Akter</p>
+                <p className="text-sm text-gray-500">Designer</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Testimonial Card 3 */}
+          <div className="bg-white p-8 rounded-xl shadow-lg transform transition duration-300 hover:scale-105" data-aos="flip-left">
+            <p className="italic text-gray-700 text-lg">“Outstanding experience! The team was very supportive and helpful.”</p>
+            
+            {/* User Info */}
+            <div className="mt-6 flex items-center">
+              <div className="w-14 h-14 flex items-center justify-center bg-green-500 text-white text-lg font-bold rounded-full mr-4">A</div>
+              <div>
+                <p className="font-semibold text-gray-900">Alex Smith</p>
+                <p className="text-sm text-gray-500">Developer</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Testimonial Card 4 */}
+          <div className="bg-white p-8 rounded-xl shadow-lg transform transition duration-300 hover:scale-105" data-aos="flip-right">
+            <p className="italic text-gray-700 text-lg">“Fantastic service! I will definitely be returning in the future.”</p>
+            
+            {/* User Info */}
+            <div className="mt-6 flex items-center">
+              <div className="w-14 h-14 flex items-center justify-center bg-purple-500 text-white text-lg font-bold rounded-full mr-4">S</div>
+              <div>
+                <p className="font-semibold text-gray-900">Sophia Lee</p>
+                <p className="text-sm text-gray-500">Marketer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div className="bg-gradient-to-r from-blue-700 via-purple-400 to-blue-600  py-20 px-6 md:px-12 border-b-2 border-white" data-aos="fade-up">
+      <h2 className="text-4xl font-extrabold text-center text-white mb-12">
+        Frequently Asked Questions
+      </h2>
+      <div className="max-w-3xl mx-auto space-y-6">
+        {faqs.map((faq, index) => (
+          <div
+            key={index}
+            className="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden transition-all duration-300"
+          >
+            <button
+              className="flex justify-between items-center w-full text-left px-6 py-4 bg-gray-100 hover:bg-gray-200"
+              onClick={() => toggleFAQ(index)}
+            >
+              <span className="text-lg font-semibold text-gray-900">
+                {faq.question}
+              </span>
+              {openIndex === index ? (
+                <ChevronUp className="text-gray-600" />
+              ) : (
+                <ChevronDown className="text-gray-600" />
+              )}
+            </button>
+            {openIndex === index && (
+              <div className="px-6 py-4 text-gray-700 bg-white border-t">
+                {faq.answer}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+
+
+
 
 
 
