@@ -1,7 +1,11 @@
+
+
+
+
 import { useLoaderData } from 'react-router-dom';
 import { useState } from 'react';
 import ServiceCard from './ServiceCard';
-
+import { FaSearch, FaSortAmountDownAlt, FaMapMarkerAlt } from "react-icons/fa";
 const Services = () => {
   const services = useLoaderData();
   const [searchQuery, setSearchQuery] = useState('');
@@ -32,42 +36,55 @@ const Services = () => {
 
   return (
     <div className="mx-auto p-10 bg-gradient-to-r from-blue-700 via-purple-400 to-blue-600 ">
-      <h1 className="text-3xl font-bold text-center my-6">All Services</h1>
-      
-      <div className="flex flex-col  sm:flex-row justify-between items-center mb-6 gap-4">
-        {/* Search Input */}
-        <input
-          type="text"
-          placeholder="Search by title..."
-          className="input input-bordered w-full max-w-xs bg-blue-900 text-white font-semibold"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-        />
-        
-        {/* Dropdown for Sorting */}
-        <select
-          className="select select-bordered w-full max-w-xs bg-yellow-900 text-white"
-          value={sortOrder}
-          onChange={(e) => setSortOrder(e.target.value)}
-        >
-          <option value="default">Sort by Price</option>
-          <option value="ascending">Price: Low to High</option>
-          <option value="descending">Price: High to Low</option>
-        </select>
+    
+    <h1 className="text-4xl font-bold text-white text-center my-6">🚀 Explore Our Services 🚀</h1>
+      <div className="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
 
-        {/* Dropdown for Filtering by Service Area */}
-        <select
-          className="select select-bordered w-full max-w-xs bg-green-900 text-white"
-          value={filterArea}
-          onChange={(e) => setFilterArea(e.target.value)}
-        >
-          {serviceAreas.map(area => (
-            <option key={area} value={area}>{area}</option>
-          ))}
-        </select>
-      </div>
+        
+  {/* Search Input */}
+  <div className="relative w-full max-w-xs">
+    <input
+      type="text"
+      placeholder="Search by title..."
+      className="input input-bordered w-full pl-10 bg-white text-black font-semibold"
+      value={searchQuery}
+      onChange={(e) => setSearchQuery(e.target.value)}
+    />
+    <FaSearch className="absolute left-3 top-3 text-gray-500" />
+  </div>
+
+  {/* Dropdown for Sorting */}
+  <div className="relative w-full max-w-xs">
+    <select
+      className="select select-bordered w-full pl-10 bg-white text-black"
+      value={sortOrder}
+      onChange={(e) => setSortOrder(e.target.value)}
+    >
+      <option value="default">Sort by Price</option>
+      <option value="ascending">Price: Low to High</option>
+      <option value="descending">Price: High to Low</option>
+    </select>
+    <FaSortAmountDownAlt className="absolute left-3 top-3 text-gray-500" />
+  </div>
+
+  {/* Dropdown for Filtering by Service Area */}
+  <div className="relative w-full max-w-xs">
+    <select
+      className="select select-bordered w-full pl-10 bg-white text-black"
+      value={filterArea}
+      onChange={(e) => setFilterArea(e.target.value)}
+    >
+      {serviceAreas.map(area => (
+        <option key={area} value={area}>{area}</option>
+      ))}
+    </select>
+    <FaMapMarkerAlt className="absolute left-3 top-3 text-gray-500" />
+  </div>
+</div>
+
+
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         {filteredServices.map(service => (
           <ServiceCard key={service._id} service={service} />
         ))}
