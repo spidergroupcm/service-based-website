@@ -53,10 +53,10 @@ const Navbar = () => {
   };
 
   const isActive = (path) =>
-    location.pathname === path ? 'text-yellow-200 font-bold' : '';
+    location.pathname === path ? 'text-yellow-500 font-bold' : '';
 
   return (
-    <div className="navbar  mx-auto sticky top-0 bg-blue-800 shadow z-50">
+    <div className="navbar  mx-auto sticky top-0 bg-blue-600 shadow z-50 px-10">
       <div className="flex items-center justify-between w-full px-5">
         <Link
           to="/"
@@ -64,7 +64,12 @@ const Navbar = () => {
           onClick={closeMobileMenu}
         >
           <img className="w-auto h-10" src={logo} alt="FastHelpbd Logo" />
-          <span className="font-bold text-2xl text-white">FastHelpbd</span>
+         
+
+          <span className="font-bold text-2xl text-white">
+          Fast<span className="text-yellow-400">Help<span className="text-green-400">b</span><span className="text-red-500">d</span></span>
+          </span>
+
         </Link>
 
         <div className="flex items-center gap-4">
@@ -108,6 +113,17 @@ const Navbar = () => {
               Services
             </Link>
           </li>
+
+          <li>
+            <Link
+              to="/blogs"
+              onClick={closeMobileMenu}
+              className={isActive('/blogs')}
+            >
+              Blogs
+            </Link>
+          </li>
+
           {user && (
             <li className="relative">
               <button
@@ -203,7 +219,8 @@ const Navbar = () => {
           ) : (
             <Link
               to="/login"
-              className="btn btn-primary ml-4"
+              className="bg-yellow-500 hover:bg-green-500 rounded-lg py-2 px-4 ml-3  font-bold"
+
               onClick={closeMobileMenu}
             >
               Login

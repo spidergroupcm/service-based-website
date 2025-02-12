@@ -13,6 +13,7 @@ import ServiceDetails from "../pages/ServiceDetails";
 import DynamicTitle from "../components/DynamicTitle";
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import PrivateRoute from "./PrivateRoute";
+import Blog from "../pages/Blog";
 
 // Loader for ManageService to fetch user-specific services
 const manageServiceLoader = async () => {
@@ -77,6 +78,14 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ) ,
         loader: ({ params }) => fetch(`https://fasthelpbd-server-side.vercel.app/service/${params.id}`),
+      },
+      {
+        path: '/blogs',
+        element:(
+          <PrivateRoute>
+            <Blog></Blog>
+          </PrivateRoute>
+        )
       },
       {
         path: '/dashboard/add-service',

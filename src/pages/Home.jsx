@@ -187,7 +187,7 @@ const Home = () => {
 
 
 
-<section id="about" className="bg-gradient-to-r from-blue-700 via-purple-400 to-blue-600  border-t-2 border-b-2 border-white p-10">
+<section id="about" className="bg-gradient-to-r from-blue-700 via-purple-400 to-blue-600  border-b-2 border-white p-10">
   <div className="container mx-auto px-6 lg:px-12">
     <div className="flex flex-col lg:flex-row items-center">
       {/* Left - Image */}
