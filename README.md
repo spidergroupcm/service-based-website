@@ -22,5 +22,5 @@ Hosting: Firebase Hosting
 🌐 Real-time Data: Real-time data updates from MongoDB and Firebase.  
 🎨 Modern UI: Clean and attractive user interface using Tailwind CSS and Daisy UI.  
 
-🔗 **[Live Demo](https://fasthelpbd-369369.surge.sh/)**
+🔗 **[Live Demo](https://fasthelpbd-869ab.web.app/)**
 
